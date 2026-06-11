@@ -36,7 +36,7 @@ header .logo {
 }
 
 header .logo span {
-    color: #1b5e20; /* Verde escuro para melhor contraste e leitura */
+    color: #1b5e20;
 }
 
 header nav a {
@@ -95,7 +95,7 @@ header nav a:hover {
 }
 
 /* ==========================================================================
-   4. SEÇÕES DE CONTEÚDO e CARDS (ALINHAMENTO HORIZONTAL)
+   4. SEÇÕES DE CONTEÚDO e CARDS (ALINHAMENTO HORIZONTAL MANDATÓRIO)
    ========================================================================== */
 .content-section {
     padding: 60px 10%;
@@ -119,12 +119,12 @@ header nav a:hover {
     background-color: #edf4f0;
 }
 
-/* Container que alinha os 3 cards lado a lado na horizontal */
+/* Força os elementos a ficarem alinhados lado a lado na horizontal */
 .cards-container {
-    display: flex;
+    display: flex !important;
     justify-content: center;
-    flex-wrap: wrap; /* Permite quebrar linha se a tela for muito pequena */
-    gap: 30px; /* Espaçamento idêntico entre os cards */
+    flex-wrap: wrap;
+    gap: 30px;
     width: 100%;
 }
 
@@ -135,8 +135,8 @@ header nav a:hover {
     border-radius: 8px;
     width: 300px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    border-top: 5px solid #4caf50; /* Detalhe verde no topo */
-    text-align: left; /* Alinhamento do texto interno para melhor leitura */
+    border-top: 5px solid #4caf50;
+    text-align: left;
 }
 
 .card h3 {
@@ -148,7 +148,7 @@ header nav a:hover {
 .card p {
     font-size: 15px;
     color: #666;
-    margin: 0; /* Reseta margens para não quebrar o layout interno */
+    margin: 0;
 }
 
 /* ==========================================================================
@@ -187,7 +187,7 @@ header nav a:hover {
    6. RODAPÉ (FOOTER)
    ========================================================================== */
 footer {
-    background-color: #2e3d36; /* Tom escuro ecológico */
+    background-color: #2e3d36;
     color: #bbb;
     text-align: center;
     padding: 25px 20px;
@@ -195,7 +195,7 @@ footer {
 }
 
 /* ==========================================================================
-   7. RESPONSIVIDADE (ADAPTAÇÃO PARA CELULARES)
+   7. RESPONSIVIDADE (ADAPTAÇÃO PARA TELEMÓVEIS)
    ========================================================================== */
 @media (max-width: 768px) {
     header {
@@ -221,6 +221,6 @@ footer {
     }
     
     .card {
-        width: 100%; /* Em telas de celular, os cards ocupam a largura total de forma organizada */
+        width: 100%;
     }
 }
