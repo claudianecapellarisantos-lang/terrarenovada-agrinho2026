@@ -7,7 +7,7 @@
 }
 
 body {
-    color: #1a3117c9;
+    color: #2e4a3e;
     line-height: 1.6;
     background-color: #fbfbfb;
 }
@@ -23,6 +23,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 header .logo {
@@ -31,23 +32,24 @@ header .logo {
 }
 
 header .logo span {
-    color: #81c784;
+    color: #1b5e20; /* Verde escuro para melhor contraste */
 }
 
 header nav a {
     color: #fff;
     text-decoration: none;
     margin-left: 20px;
+    font-weight: 500;
     transition: color 0.3s;
 }
 
 header nav a:hover {
-    color: #81c784;
+    color: #1b5e20; /* Verde escuro para melhor contraste */
 }
 
 /* Banner Principal (Hero) */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200') no-repeat center center/cover;
     height: 70vh;
     display: flex;
     justify-content: center;
@@ -69,6 +71,7 @@ header nav a:hover {
 }
 
 .btn {
+    display: inline-block;
     background-color: #4caf50;
     color: #fff;
     padding: 12px 30px;
@@ -110,9 +113,9 @@ header nav a:hover {
 /* Cards (Soluções) */
 .cards-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
 }
 
 .card {
@@ -122,6 +125,7 @@ header nav a:hover {
     width: 300px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     border-top: 5px solid #4caf50;
+    text-align: left; /* Garante boa leitura interna do card */
 }
 
 .card h3 {
@@ -161,9 +165,27 @@ header nav a:hover {
 
 /* Rodapé */
 footer {
-    background-color: #22222270;
-    color: #777;
+    background-color: #2e3d36; /* Um tom escuro esverdeado que combina com o tema */
+    color: #bbb;
     text-align: center;
-    padding: 20px;
+    padding: 25px 20px;
     font-size: 14px;
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    header nav a {
+        margin: 0 10px;
+    }
+    .hero-content h1 {
+        font-size: 30px;
+    }
+    .content-section {
+        padding: 40px 5%;
+    }
 }
