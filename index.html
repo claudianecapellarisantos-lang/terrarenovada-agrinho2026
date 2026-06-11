@@ -69,42 +69,22 @@
         <h2>Simule o Impacto na Sua Terra</h2>
         <p>Veja quanto você pode economizar e regenerar trocando parte do adubo químico por orgânico.</p>
         
-        <div class="simulador-box">
-            <label for="hectares">Hectares da propriedade:</label>
-            <input type="number" id="hectares" min="1" value="10">
-            
-            <label for="percentual">% de substituição por orgânico:</label>
-            <input type="range" id="percentual" min="0" max="100" value="30" oninput="calcular()">
-            <span id="percentual-valor">30%</span>
-            
-            <div class="resultado">
-                <p><strong>Economia estimada/ano:</strong> R$ <span id="economia">0</span></p>
-                <p><strong>CO₂ evitado:</strong> <span id="carbono">0</span> kg</p>
+        <section id="simulador" class="content-section bg-light">
+        <h2>Simulador de Impacto Terra Renovada</h2>
+        <p>Clique no botão abaixo para ver a transformação do solo ao substituir a química pelo orgânico!</p>
+        
+        <div class="interactive-box">
+            <div id="status-solo" class="status-quimico">
+                <p id="texto-status">Solo Atual: Saturado com Agrotóxicos (Fraco e Poluído)</p>
             </div>
+            <button id="btn-transformar" class="btn">Aplicar Adubo Orgânico</button>
         </div>
     </section>
 
     <footer>
-        <p>Projeto Agrinho 2026 - Terra Renovada 🌱 | Toledo - PR</p>
+        <p>&copy; 2026 Terra Renovada - Cultivando um futuro sustentável.</p>
     </footer>
 
-    <script>
-    function calcular() {
-        const hectares = document.getElementById('hectares').value || 0;
-        const percentual = document.getElementById('percentual').value;
-        document.getElementById('percentual-valor').textContent = percentual + '%';
-        
-        const economiaPorHa = 400;
-        const carbonoPorHa = 120;
-        
-        const economiaTotal = hectares * economiaPorHa * (percentual / 100);
-        const carbonoTotal = hectares * carbonoPorHa * (percentual / 100);
-        
-        document.getElementById('economia').textContent = economiaTotal.toLocaleString('pt-BR', {minimumFractionDigits: 2});
-        document.getElementById('carbono').textContent = Math.round(carbonoTotal).toLocaleString('pt-BR');
-    }
-    calcular();
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
