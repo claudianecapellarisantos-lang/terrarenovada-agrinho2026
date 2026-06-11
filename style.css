@@ -7,7 +7,7 @@
 }
 
 body {
-    color: #333;
+    color: #2ee616c9;
     line-height: 1.6;
     background-color: #fbfbfb;
 }
@@ -97,6 +97,8 @@ header nav a:hover {
 }
 
 .content-section p {
+    display:flex;
+    justify-content: space-around;
     max-width: 800px;
     margin: 0 auto 40px;
     font-size: 18px;
