@@ -55,8 +55,8 @@ header nav a:hover {
    3. BANNER PRINCIPAL (HERO)
    ========================================================================== */
 .hero {
-    background: linear-gradient(rgba (0,0,0,0.55), (0,0,0, 0.55)),
-    url ('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200') no-repeat center/center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+                url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200') no-repeat center center/cover;
     height: 70vh;
     display: flex;
     justify-content: center;
@@ -136,7 +136,7 @@ header nav a:hover {
     width: 300px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     border-top: 5px solid #4caf50;
-    text-align: justify;
+    text-align: left;
 }
 
 .card h3 {
@@ -187,8 +187,8 @@ header nav a:hover {
    6. RODAPÉ (FOOTER)
    ========================================================================== */
 footer {
-    background-color: #23dd807c;
-    color: #1cd64b;
+    background-color: #2e3d36;
+    color: #bbb;
     text-align: center;
     padding: 25px 20px;
     font-size: 14px;
@@ -203,24 +203,26 @@ footer {
         gap: 15px;
         padding: 15px;
     }
-    
+   
     header nav a {
         margin: 0 10px;
     }
-    
+   
     .hero-content h1 {
         font-size: 30px;
     }
-    
+   
     .content-section {
         padding: 40px 5%;
     }
-    
+   
     .cards-container {
         gap: 20px;
     }
-    
+   
     .card {
         width: 100%;
     }
 }
+
+
