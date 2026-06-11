@@ -1,4 +1,6 @@
-/* Configurações Gerais */
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS e RESET
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +14,9 @@ body {
     background-color: #fbfbfb;
 }
 
-/* Cabeçalho */
+/* ==========================================================================
+   2. CABEÇALHO (HEADER)
+   ========================================================================== */
 header {
     background-color: #61d8a5;
     color: #fff;
@@ -32,7 +36,7 @@ header .logo {
 }
 
 header .logo span {
-    color: #1b5e20; /* Verde escuro para melhor contraste */
+    color: #1b5e20; /* Verde escuro para melhor contraste e leitura */
 }
 
 header nav a {
@@ -44,12 +48,15 @@ header nav a {
 }
 
 header nav a:hover {
-    color: #1b5e20; /* Verde escuro para melhor contraste */
+    color: #1b5e20;
 }
 
-/* Banner Principal (Hero) */
+/* ==========================================================================
+   3. BANNER PRINCIPAL (HERO)
+   ========================================================================== */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), 
+                url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200') no-repeat center center/cover;
     height: 70vh;
     display: flex;
     justify-content: center;
@@ -87,7 +94,9 @@ header nav a:hover {
     background-color: #388e3c;
 }
 
-/* Seções de Conteúdo */
+/* ==========================================================================
+   4. SEÇÕES DE CONTEÚDO e CARDS (ALINHAMENTO HORIZONTAL)
+   ========================================================================== */
 .content-section {
     padding: 60px 10%;
     text-align: center;
@@ -110,30 +119,41 @@ header nav a:hover {
     background-color: #edf4f0;
 }
 
-/* Cards (Soluções) */
+/* Container que alinha os 3 cards lado a lado na horizontal */
 .cards-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
+    flex-wrap: wrap; /* Permite quebrar linha se a tela for muito pequena */
+    gap: 30px; /* Espaçamento idêntico entre os cards */
+    width: 100%;
 }
 
+/* Estilização individual de cada Card */
 .card {
-    background: #fff;
+    background: #ffffff;
     padding: 30px;
     border-radius: 8px;
     width: 300px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    border-top: 5px solid #4caf50;
-    text-align: left; /* Garante boa leitura interna do card */
+    border-top: 5px solid #4caf50; /* Detalhe verde no topo */
+    text-align: left; /* Alinhamento do texto interno para melhor leitura */
 }
 
 .card h3 {
     margin-bottom: 15px;
     color: #2e4a3e;
+    font-size: 20px;
 }
 
-/* Caixa Interativa */
+.card p {
+    font-size: 15px;
+    color: #666;
+    margin: 0; /* Reseta margens para não quebrar o layout interno */
+}
+
+/* ==========================================================================
+   5. CAIXA INTERATIVA (SIMULADOR)
+   ========================================================================== */
 .interactive-box {
     max-width: 500px;
     margin: 0 auto;
@@ -163,29 +183,44 @@ header nav a:hover {
     border: 1px solid #a5d6a7;
 }
 
-/* Rodapé */
+/* ==========================================================================
+   6. RODAPÉ (FOOTER)
+   ========================================================================== */
 footer {
-    background-color: #2e3d36; /* Um tom escuro esverdeado que combina com o tema */
+    background-color: #2e3d36; /* Tom escuro ecológico */
     color: #bbb;
     text-align: center;
     padding: 25px 20px;
     font-size: 14px;
 }
 
-/* Responsividade para Celulares */
+/* ==========================================================================
+   7. RESPONSIVIDADE (ADAPTAÇÃO PARA CELULARES)
+   ========================================================================== */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         gap: 15px;
         padding: 15px;
     }
+    
     header nav a {
         margin: 0 10px;
     }
+    
     .hero-content h1 {
         font-size: 30px;
     }
+    
     .content-section {
         padding: 40px 5%;
+    }
+    
+    .cards-container {
+        gap: 20px;
+    }
+    
+    .card {
+        width: 100%; /* Em telas de celular, os cards ocupam a largura total de forma organizada */
     }
 }
