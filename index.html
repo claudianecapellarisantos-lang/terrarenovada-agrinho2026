@@ -34,12 +34,10 @@
                 <h3>Morte da biota</h3>
                 <p>Os defensivos químicos não eliminam apenas as pragas, mas também fungos, bactérias e minhocas essenciais para decompor a matéria-prima e gerar húmus.</p>
             </div>
-
             <div class="card">
                 <h3>Perda da fertilidade</h3>
                 <p>Sem a biodiversidade natural, o solo perde sua capacidade de ciclagem de nutrientes como nitrogênio e fósforo, tornando-se dependente de adubos sintéticos.</p>
             </div>
-
             <div class="card">
                 <h3>Compactação e erosão</h3>
                 <p>A degradação da matéria orgânica altera a estrutura física da terra, dificultando a absorção de água, o que aumenta o escoamento superficial e acelera a erosão.</p>
@@ -56,12 +54,10 @@
                 <h3>Compostagem</h3>
                 <p>Transforma resíduos em húmus rico. Aumenta a matéria orgânica e a capacidade de troca catiônica do solo, segurando mais nutrientes.</p>
             </div>
-
             <div class="card">
                 <h3>Adubação Verde</h3>
                 <p>Plantas como crotalária e mucuna fixam nitrogênio do ar, descompactam o solo com suas raízes e controlam nematoides naturalmente.</p>
             </div>
-
             <div class="card">
                 <h3>Biofertilizantes</h3>
                 <p>Caldas ricas em microrganismos eficientes que fortalecem a planta, equilibram a biota do solo e induzem resistência a pragas.</p>
@@ -78,4 +74,37 @@
             <input type="number" id="hectares" min="1" value="10">
             
             <label for="percentual">% de substituição por orgânico:</label>
-            <input type="range" id="percentual" min="0" max="
+            <input type="range" id="percentual" min="0" max="100" value="30" oninput="calcular()">
+            <span id="percentual-valor">30%</span>
+            
+            <div class="resultado">
+                <p><strong>Economia estimada/ano:</strong> R$ <span id="economia">0</span></p>
+                <p><strong>CO₂ evitado:</strong> <span id="carbono">0</span> kg</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Projeto Agrinho 2026 - Terra Renovada 🌱 | Toledo - PR</p>
+    </footer>
+
+    <script>
+    function calcular() {
+        const hectares = document.getElementById('hectares').value || 0;
+        const percentual = document.getElementById('percentual').value;
+        document.getElementById('percentual-valor').textContent = percentual + '%';
+        
+        const economiaPorHa = 400;
+        const carbonoPorHa = 120;
+        
+        const economiaTotal = hectares * economiaPorHa * (percentual / 100);
+        const carbonoTotal = hectares * carbonoPorHa * (percentual / 100);
+        
+        document.getElementById('economia').textContent = economiaTotal.toLocaleString('pt-BR', {minimumFractionDigits: 2});
+        document.getElementById('carbono').textContent = Math.round(carbonoTotal).toLocaleString('pt-BR');
+    }
+    calcular();
+    </script>
+
+</body>
+</html>
