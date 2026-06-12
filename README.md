@@ -1,3 +1,4 @@
-# terrarenovada-agrinho2026
-terrarenovada/agrinho2026 O site tem o objetivo de mostrar como o cuidado do solo é essencial para a produtividade na agricultura, pois um solo bem cuidado é um solo produtivo.
-
+# solorenovado-agrinho2026
+solorenovado/agrinho2026 O site tem o objetivo de mostrar como o cuidado do solo é essencial para a produtividade na agricultura, pois um solo bem cuidado é um solo produtivo. Além de destacar que o uso excessivos de agrotóxicos pode ser prejudicial, o site também destaca alguns projetos de sucesso no Estado do Paraná. Como desenvolvi o site, primeiramente busquei ideias em conjunto com a Professora achei esta sobre solo e resolvi desenvolver o projeto em cima desta temática. O site usa html css e java, sob orientação e ajuda  da professora desenvolvi os códigos, foi meu  primeiro site. Uma observação o banner do site gerei pela IA do google gemini, achei melhor assim do que correr o risco de colocar uma imagem com direito autoral. O emoji da folhinha eu peguei no site https://emojiterra.com/pt/emojis/biblioteca-pt/
+onde os emojis pertencem a Imagens de emojis
+Mozilla (FxEmojis): Fornecido pela Mozilla Foundation, disponível no projeto FxEmojis no GitHub . Licenciado sob a Licença Pública Internacional Creative Commons Atribuição 4.0 (CC BY 4.0).
