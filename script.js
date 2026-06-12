@@ -24,3 +24,20 @@ btnTransformar.addEventListener('click', () => {
         soloSaudavel = false;
     }
 });
+btnTransformar.addEventListener('click', () => {
+    if (!soloSaudavel) {
+        // Transforma em solo orgânico
+        statusSolo.classList.remove('status-quimico');
+        statusSolo.classList.add('status-organico');
+        textoStatus.innerText = "Solo Renovado: Rico em nutrientes, microrganismos ativos e livre de química!";
+        btnTransformar.innerText = "Resetar Solo";
+        soloSaudavel = true;
+    } else {
+        // Reseta para o estado com agrotóxicos
+        statusSolo.classList.remove('status-organico');
+        statusSolo.classList.add('status-quimico');
+        textoStatus.innerText = "Solo Atual: Compactado (baixa produtividade)";
+        btnTransformar.innerText = "Fazer manejo biológico";
+        soloSaudavel = false;
+    }
+});
